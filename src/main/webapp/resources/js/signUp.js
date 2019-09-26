@@ -1,13 +1,17 @@
 var idCheck = 0;
 function duplicationId() {
+
     var inputId= $("#signUpUserId").val();
+    var data = {};
+    data.inputId = inputId;
         $.ajax({
             async: false,
             type: "post",
             url: "signUpIdCheck",
-            data: inputId,
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(data),
             success: function (data) {
-                alert("DATA "+data)
+                alert("DATA "+data);
                 if (data == "S") {
                     alert("사용가능한 아이디입니다. : "+data);
 

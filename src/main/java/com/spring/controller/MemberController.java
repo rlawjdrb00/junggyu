@@ -53,6 +53,7 @@ public class MemberController {
         String checkRst;
         int idCnt = memberService.checkUserId(inputId);
         System.out.println("dddddddddd : " +idCnt);
+        System.out.println("inputID = " +inputId);
 
             if(idCnt > 0)
                 checkRst ="F";

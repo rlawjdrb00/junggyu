@@ -19,7 +19,7 @@
 
     <select id="checkUserId" parameterType="String" resultType="integer">
         select count(*) as existIdNUM FROM mydb.member
-        where userid = #{inputId}
+        where userid = #{userid}
 
     </select>
 
