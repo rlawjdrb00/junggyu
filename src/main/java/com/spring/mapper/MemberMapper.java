@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 public interface MemberMapper {
 
     public void memberSignUp(Member member);
-    public int checkUserId(String inputId);
+    public  int checkUserId(String inputId);
+    public Member memberInfo(Member member);
 
 }

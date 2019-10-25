@@ -60,11 +60,11 @@ h1,h2,h3,h4,h5,h6{
   'Segoe UI Symbol',
   'Noto Color Emoji'
 }
-@media (min-width:768px){
-  section{
-    padding:150px 0
-  }
-}
+/*@media (min-width:768px){*/
+  /*section{*/
+    /*padding:150px 0*/
+  /*}*/
+/*}*/
 ::-moz-selection{
   background:#fed136;text-shadow:none
 }
@@ -200,7 +200,7 @@ header.masthead{
   text-align:center;
   color:#fff;
   /*background-image:url(../img/header-minek.jpg);*/
-  background-image:url(../../img/header-minek.jpg);
+  /*background-image:url(../../img/minek00.jpg);*/
   /*background-image:url(../../img/header-minek.jpg);*/
   background-repeat:no-repeat;
   background-attachment:scroll;

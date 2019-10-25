@@ -9,15 +9,11 @@
 <jsp:include page="../tab/header.jsp"/>
 <H1>회원가입 완료</H1>
 <%
-    String userid= request.getParameter("userid");
+    String userId= request.getParameter("userId");
     String no = request.getParameter("userpw");
     String addr = request.getParameter("SignUpUserCompanyAddress");
     String address = request.getParameter("signUpUserCompanyAddressDetail");
 %>
 
-<%= userid%>
-<%= no%>
-<%= addr%>
-<%= address%>
 
 <jsp:include page="../tab/footer.jsp"/>

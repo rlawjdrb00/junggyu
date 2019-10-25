@@ -2,16 +2,12 @@ var idCheck = 0;
 function duplicationId() {
 
     var inputId= $("#signUpUserId").val();
-    var data = {};
-    data.inputId = inputId;
         $.ajax({
             async: false,
             type: "post",
             url: "signUpIdCheck",
-            contentType: "application/json;charset=utf-8",
-            data: JSON.stringify(data),
+            data : inputId,
             success: function (data) {
-                alert("DATA "+data);
                 if (data == "S") {
                     alert("사용가능한 아이디입니다. : "+data);
 
@@ -69,9 +65,10 @@ function duplicationId() {
             }
         }
         $.ajax({
-            url:"signUpOk",
-            type:"get",
+            url:"signUp",
+            type:"post",
             data:formData,
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
             dataType:"json",
             success:function(data){
                 console.log(data);
@@ -94,19 +91,6 @@ function duplicationId() {
         what.value="";
         what.focus();
     }
-
-
-// function dosignUp() {
-//     window.name = "signUp";
-//     window.open("signUpPopup.html","insert","width = 450, height = 320 , resizable = no , scrollbars = no,status = no");
-//
-// }
-//
-// function dosignUp()
-// {
-//     window.open('signUpPopup.html','popup', 'width=300, height=200, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
-// }
-
 
 
 

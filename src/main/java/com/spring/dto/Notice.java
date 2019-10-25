@@ -2,6 +2,7 @@ package com.spring.dto;
 
 import org.apache.ibatis.type.Alias;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Alias("Notice")
@@ -9,7 +10,7 @@ public class Notice {
     private int idx;
     private String title;
     private String writer;
-    private Date regdata;
+    private Timestamp regdate;
     private String content;
 
     public int getIdx() {
@@ -36,12 +37,13 @@ public class Notice {
         this.writer = writer;
     }
 
-    public Date getRegdata() {
-        return regdata;
+
+    public Timestamp getRegdate() {
+        return regdate;
     }
 
-    public void setRegdata(Date regdata) {
-        this.regdata = regdata;
+    public void setRegdate(Timestamp regdate) {
+        this.regdate = regdate;
     }
 
     public String getContent() {
@@ -58,7 +60,7 @@ public class Notice {
                 "idx=" + idx +
                 ", title='" + title + '\'' +
                 ", writer='" + writer + '\'' +
-                ", regdata=" + regdata +
+                ", regdate=" + regdate +
                 ", content='" + content + '\'' +
                 '}';
     }

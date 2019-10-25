@@ -14,12 +14,12 @@
 <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
     <div class="card card-signin my-5">
 
-        <form role="form" method="get" id="signUp" name="signUp">
+        <form role="form" method="post" id="signUp" name="signUp">
             <!-- <form role="form"> -->
             <div class="form-group">
                 <div class="form-group" id="inputId">
                     <label>아이디</label>
-                    <input class="form-control" style="margin-bottom: 5px;" placeholder="아이디" name="userid"
+                    <input class="form-control" style="margin-bottom: 5px;" placeholder="아이디" name="userId"
                            id="signUpUserId" type="text" />
                     <input type="button" class="btn btn-secondary" style="width: 20%;" value="중복확인"
                            onclick="duplicationId();" />

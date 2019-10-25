@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Tester
-  Date: 2019-08-30
-  Time: 오후 5:42
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="tab/header.jsp"/>
 <body id="page-top">
@@ -67,107 +61,6 @@
     </div>
 </section>
 
-<!-- Portfolio Grid -->
-<section class="bg-light page-section" id="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Portfolio</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <%--<img class="img-fluid" src="<%=request.getContextPath()%>/resources/img/about/minek-about-1.jpg" alt="">--%>
-                    <img class="img-fluid" src="<%=request.getContextPath()%>/resources/img/portfolio/01-thumbnail.jpg" alt="">
-                </a>
-                <div class="portfolio-caption">
-
-                    <h4>기업문화</h4>
-                    <p class="text-muted">창의적이고 열정이 묻어나는 유쾌한 기업입니다.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="<%=request.getContextPath()%>/resources/img/portfolio/02-thumbnail.jpg" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>기업 CI</h4>
-                    <p class="text-muted">마인케이의 워드마크는 글로벌을 지향합니다.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="<%=request.getContextPath()%>/resources/img/portfolio/03-thumbnail.jpg" alt="">
-
-                </a>
-                <div class="portfolio-caption">
-                    <h3 class="img-fluid notice" > 공지사항 </h3>
-                    <%--<h4 class="notice">IT 비즈니스 분야의 새로운 장을 여는 마인케이</h4>--%>
-                    <p class="text-muted notice">IT 비즈니스 분야의 포트폴리오를 완성하고 있는 성공 기업입니다.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="<%=request.getContextPath()%>/resources/img/portfolio/04-thumbnail.jpg" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Lines</h4>
-                    <p class="text-muted">Branding</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="<%=request.getContextPath()%>/resources/img/portfolio/05-thumbnail.jpg" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Southwest</h4>
-                    <p class="text-muted">Website Design</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="<%=request.getContextPath()%>/resources/img/portfolio/06-thumbnail.jpg" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Window</h4>
-                    <p class="text-muted">Photography</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- About -->
 <section class="page-section" id="about">

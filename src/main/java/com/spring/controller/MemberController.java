@@ -7,7 +7,10 @@ import org.springframework.stereotype.Controller;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class MemberController {
@@ -21,48 +24,58 @@ public class MemberController {
     public String signUp(){
         return "member/signUp";
     }
-    @GetMapping(value ="/login")
-    public String login(){
-        return "member/login";
-    }
 
 
-
-//    @RequestMapping(value = "/signUpOk",method = RequestMethod.GET)
-    @GetMapping(value="/signUpOk")
+    @PostMapping(value = "/signUp")
     public @ResponseBody Map<String , Object> signUpOk(Member member){
         memberService.memberSignUp(member);
         Map<String,Object> map= new HashMap<>();
         map.put("data","success");
         return map;
     }
+    @GetMapping(value="/signUpOk")
+    public String signUpOk() {return "member/signUpOk";}
 
-    @PostMapping(value="/signUpOK")
-    public String signUpOkForm(){
-
-        return "redirect:/member/signUpOk";
-    }
-
-
-
-
-//    @PostMapping(value =\"/signUpIdCheck")
-    @RequestMapping("signUpIdCheck")
+    @PostMapping(value ="/signUpIdCheck")
     @ResponseBody
-    public String signUpCheckID(@RequestBody String inputId){
+    public String signUpCheckID(@RequestBody String inputId ){
         String checkRst;
         int idCnt = memberService.checkUserId(inputId);
-        System.out.println("dddddddddd : " +idCnt);
-        System.out.println("inputID = " +inputId);
 
-            if(idCnt > 0)
-                checkRst ="F";
-            else
-                checkRst ="S";
-
-        System.out.println(checkRst+" : checkRst");
+            if(idCnt > 0) {
+                checkRst = "F";
+            }else {
+                checkRst = "S";
+            }
             return checkRst;
     }
+
+
+    @GetMapping(value ="/login")
+    public String login(){
+        System.out.println("GET");
+        return "member/login";
+    }
+
+    @PostMapping(value ="/loginCheck")
+    public @ResponseBody String loginCheck(@ModelAttribute Member member , HttpSession session){
+        boolean result = memberService.login(member,session);
+
+        if(result == true){
+            return "success";
+        }else{
+            return "failure";
+        }
+    }
+
+    @GetMapping(value ="/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+
+        return "redirect:/";
+    }
+
+
 
 
 

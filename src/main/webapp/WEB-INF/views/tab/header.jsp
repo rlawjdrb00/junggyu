@@ -53,9 +53,28 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/notice/list">notice</a>
                 </li>
+                <c:if test="${member.userId == null}">
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/signUp">signUp</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/login">login</a>
+                </li>
+                </c:if>
+                <c:if test="${member.userId != null}">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/logout">logout</a>
+                    </li>
+                </c:if>
+
+                <c:if test="${member.userId == 'admin'}">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/memberList">회원리스트</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="${pageContext.request.contextPath}/logout">logout</a>
+                    </li>
+                </c:if>
             </ul>
         </div>
     </div>

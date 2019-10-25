@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0/EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mapper.MemberMapper">
+    <insert id="memberSignUp" parameterType="Member">
+    insert into mydb.member(userId,userpw ,username , tel , postno , addr , addr_detail)
+    values (
+        #{userId},
+        #{userpw},
+        #{username},
+        #{tel},
+        #{postno},
+        #{addr},
+        #{addr_detail}
+    )
+    </insert>
+
+
+    <select id="checkUserId" parameterType="String" resultType="integer">
+        select count(*) as existIdNUM FROM mydb.member
+        where userId = #{userid}
+    </select>
+
+    <select id="memberInfo" resultType="Member" parameterType="Member">
+          select * from mydb.member where userId = #{userId} and userpw = #{userpw}
+    </select>
+
+
+    <update id="updateComment">
+        UPDATE mydb.comment
+                SET contents = #{contents}
+                WHERE boardidx = #{boardIdx}
+    </update>
+
+</mapper>

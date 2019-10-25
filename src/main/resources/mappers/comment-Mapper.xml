@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0/EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mapper.CommentMapper">
+
+    <insert id="addComment" >
+        insert into mydb.comment(contents,boardIdx,writer) value(
+                #{contents},
+               #{boardIdx},
+               #{writer}
+        ) <selectKey order="AFTER" resultType="Integer" keyProperty="idx">SELECT LAST_INSERT_ID() </selectKey>
+    </insert>
+
+    <update id="updateComment">
+        UPDATE mydb.comment
+        set contents = #{contents}
+        WHERE idx = #{idx}
+
+    </update>
+
+    <delete id="deleteComment">
+        DELETE from mydb.comment
+                WHERE idx = #{idx}
+    </delete>
+</mapper>

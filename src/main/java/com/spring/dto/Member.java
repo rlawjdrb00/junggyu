@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class Member {
     private String username;
-    private String userid;
-    private int userpw;
+    private String userId;
+    private String userpw;
     private String tel;
 
     private String postno;
@@ -23,19 +23,20 @@ public class Member {
         this.username = username;
     }
 
-    public String getUserid() {
-        return userid;
+
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public int getUserpw() {
+    public String getUserpw() {
         return userpw;
     }
 
-    public void setUserpw(int userpw) {
+    public void setUserpw(String userpw) {
         this.userpw = userpw;
     }
 
@@ -91,7 +92,7 @@ public class Member {
     public String toString() {
         return "Member{" +
                 "username='" + username + '\'' +
-                ", userid='" + userid + '\'' +
+                ", userId='" + userId + '\'' +
                 ", userpw=" + userpw +
                 ", tel='" + tel + '\'' +
                 ", postno='" + postno + '\'' +
